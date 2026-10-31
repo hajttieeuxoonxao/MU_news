@@ -1,0 +1,23 @@
+# Thư viện cài bằng npm
+node_modules/
+
+# Biến môi trường chứa khóa bí mật: KHÔNG đẩy lên GitHub
+.env
+.env.local
+
+# CSDL SQLite (dữ liệu dẫn xuất, tự nạp lại từ CSV khi khởi động)
+*.db
+*.db-wal
+*.db-shm
+
+# Expo / build
+.expo/
+dist/
+web-build/
+*.apk
+*.aab
+
+# Hệ điều hành, editor
+.DS_Store
+Thumbs.db
+.vscode/

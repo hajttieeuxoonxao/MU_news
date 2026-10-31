@@ -1,0 +1,10 @@
+﻿# Chuẩn hoá xuống dòng: lưu LF trong repo, tự đổi theo hệ điều hành khi checkout
+* text=auto eol=lf
+
+# File nhị phân: không được sửa xuống dòng
+*.png  binary
+*.jpg  binary
+*.pdf  binary
+*.zip  binary
+*.db   binary
+*.ico  binary
