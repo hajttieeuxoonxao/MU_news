@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Michael Carrick",
+    "role": "Huấn luyện viên trưởng",
+    "nationality": "England",
+    "since": "2026-01-13",
+    "source": "https://en.wikipedia.org/wiki/Manchester_United_F.C. ; https://www.skysports.com/football/news/13539851/manchester-united-confirm-michael-carrick-has-signed-two-year-deal-to-stay-on-as-head-coach-at-old-trafford",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "name": "Steve Holland",
+    "role": "Trợ lý huấn luyện viên trưởng",
+    "nationality": "England",
+    "since": null,
+    "source": "https://en.wikipedia.org/wiki/Manchester_United_F.C.",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "name": "Travis Binnion",
+    "role": "Huấn luyện viên đội một",
+    "nationality": "Ireland",
+    "since": null,
+    "source": "https://en.wikipedia.org/wiki/Manchester_United_F.C. ; https://en.wikipedia.org/wiki/Travis_Binnion",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "name": "Jonny Evans",
+    "role": "Huấn luyện viên đội một",
+    "nationality": "Northern Ireland",
+    "since": null,
+    "source": "https://en.wikipedia.org/wiki/Manchester_United_F.C.",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "name": "Jonathan Woodgate",
+    "role": "Huấn luyện viên đội một",
+    "nationality": "England",
+    "since": null,
+    "source": "https://en.wikipedia.org/wiki/Manchester_United_F.C.",
+    "checkedAt": "2026-10-30"
+  },
+  {
+    "name": "Craig Mawson",
+    "role": "Huấn luyện viên thủ môn",
+    "nationality": "England",
+    "since": null,
+    "source": "https://en.wikipedia.org/wiki/Manchester_United_F.C.",
+    "checkedAt": "2026-10-30"
+  }
+]
