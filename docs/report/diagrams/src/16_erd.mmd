@@ -1,0 +1,54 @@
+erDiagram
+  SEASONS ||--o{ MATCHES : "có"
+  SEASONS ||--o{ SEASON_STANDINGS : "có"
+  TEAMS ||--o{ SEASON_STANDINGS : "xếp hạng"
+  TEAMS ||--o{ MATCHES : "đá sân nhà"
+  TEAMS ||--o{ MATCHES : "đá sân khách"
+  SEASONS {
+    int id PK
+    string label UK
+    int start_year
+  }
+  TEAMS {
+    int id PK
+    string name UK
+  }
+  MATCHES {
+    int id PK
+    int season_id FK
+    string match_date
+    int home_team_id FK
+    int away_team_id FK
+    int home_goals
+    int away_goals
+    string result
+    string referee
+  }
+  SEASON_STANDINGS {
+    int season_id PK,FK
+    int team_id PK,FK
+    int position
+    int played
+    int won
+    int drawn
+    int lost
+    int goals_for
+    int goals_against
+    int points
+  }
+  STAFF {
+    int id PK
+    string name
+    string role
+    string nationality
+    string since
+    string source
+    string checked_at
+  }
+  HONOURS {
+    int id PK
+    string competition
+    int titles
+    string last_won
+    string source
+  }

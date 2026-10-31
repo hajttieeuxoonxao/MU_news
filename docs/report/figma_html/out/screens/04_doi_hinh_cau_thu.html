@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>04 Đội hình - Cầu thủ</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Roboto,Arial,sans-serif;background:#E9E9E9;color:#1B1B1B}
+.screen{--red:#DA291C;--bg:#F5F5F5;--surface:#FFFFFF;--text:#1B1B1B;--text2:#6B6B6B;--hl:#FBE3E1;--thead:#1B1B1B;--border:#EBEBEB;
+  width:360px;height:800px;overflow:hidden;display:flex;flex-direction:column;background:var(--bg);color:var(--text);font-size:14px;line-height:20px}
+.screen.dark{--bg:#121212;--surface:#1E1E1E;--text:#F2F2F2;--text2:#A3A3A3;--hl:#4A1F1C;--thead:#000000;--border:#2C2C2C}
+.ic{display:inline-flex;flex:none}.ic svg{display:block}
+.status{height:24px;flex:none;display:flex;justify-content:space-between;align-items:center;padding:0 16px;font-size:12px}
+.status.red{background:var(--red);color:#fff}.status.surface{background:var(--surface);color:var(--text)}
+.hdr-tab{height:56px;flex:none;display:flex;align-items:center;padding:0 16px;background:var(--red);color:#fff;font-size:20px;font-weight:500}
+.hdr-stack{height:56px;flex:none;display:flex;align-items:center;gap:24px;padding:0 16px;background:var(--surface);border-bottom:1px solid var(--border);font-size:20px;font-weight:500}
+.content{flex:1;overflow:hidden;display:flex;flex-direction:column}.content.surface{background:var(--surface)}
+.tabbar{height:56px;flex:none;display:flex;background:var(--surface);border-top:1px solid var(--border)}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:11px;font-weight:500;line-height:14px}
+.bar{display:flex;align-items:center;gap:8px;padding:12px 12px 0}.grow{flex:1}.link{color:var(--red);font-weight:600}
+.chip{padding:6px 14px;border-radius:16px;background:var(--surface);color:var(--text)}.chip.on{background:var(--red);color:#fff}
+.search{display:flex;align-items:center;gap:8px;margin:12px;padding:10px 12px;border-radius:10px;background:var(--surface);color:var(--text2)}
+.search .q{flex:1}.search .typed{color:var(--text)}
+.list{display:flex;flex-direction:column;padding-bottom:12px}.list.pt{padding-top:6px}.bar+.list{padding-top:8px}
+.card{background:var(--surface);margin:4px 12px;border-radius:8px}
+.card.news{margin:6px 12px;border-radius:10px;overflow:hidden}
+.thumb{height:160px;background:#D9D9D9;display:flex;align-items:center;justify-content:center;width:100%;object-fit:cover}
+.dark .thumb{background:#2E2E2E}
+.news-body{padding:12px;display:flex;flex-direction:column;gap:6px}
+.title{font-size:16px;line-height:22px;font-weight:700}
+.summary{color:var(--text2);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.meta{display:flex;justify-content:space-between;align-items:center;margin-top:4px;color:var(--text2);font-size:12px;line-height:16px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:14px}
+.row-main{display:flex;flex-direction:column;gap:2px}.row-title{font-weight:600}.row-sub{color:var(--text2)}.row-sub.small{font-size:12px;line-height:16px}
+.row-right{color:var(--text2)}.row-right.dark{color:var(--text)}
+.match{padding:14px;display:flex;flex-direction:column;gap:4px}.match .row-title{font-weight:700}
+.section{padding:12px 16px 4px;font-weight:700;color:var(--red)}
+.h-sec{padding:12px;font-weight:700}.h-sec.np{padding:0 0 6px}.h-sec.mt{margin-top:16px}
+.h-lg{padding:12px;font-size:18px;line-height:24px;font-weight:800}
+.h-xl{font-size:22px;line-height:28px;font-weight:800}
+.block{padding:12px;display:flex;flex-direction:column}.honour{margin:2px 0}
+.table{display:flex;flex-direction:column}
+.tr{display:flex;align-items:center;padding:10px;background:var(--surface);border-bottom:1px solid var(--border)}
+.tr.th{background:var(--thead);color:#fff;border-bottom:none}.tr.mu{background:var(--hl)}.tr.mu .team{font-weight:700}
+.pos{width:28px;flex:none}.team{flex:1}.num{width:30px;flex:none;text-align:right}.num.b{font-weight:700}
+.detail{padding:16px;display:flex;flex-direction:column;gap:4px}.injury{color:var(--red);margin-top:4px}
+.stat-head{font-weight:700;margin-top:16px}
+.stat{display:flex;padding:6px 0;border-bottom:1px solid var(--border)}.stat-label{flex:2}.num2{flex:1;text-align:right}
+.pm{padding:4px 12px}
+.state{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;text-align:center}
+.spinner{width:36px;height:36px;border-radius:50%;border:4px solid var(--hl);border-top-color:var(--red)}
+.btn{background:var(--red);color:#fff;font-weight:600;padding:10px 20px;border-radius:8px}
+/* trang tổng hợp */
+.page{width:1664px;background:#E9E9E9;padding:40px;display:flex;flex-direction:column;gap:32px}
+.page h1{font-size:28px}.page p{color:#555;max-width:900px}
+.grid{display:flex;flex-wrap:wrap;gap:48px}
+.item{display:flex;flex-direction:column;gap:12px}.label{font-size:16px;font-weight:700}
+.shadow{box-shadow:0 2px 12px rgba(0,0,0,.12)}
+</style></head><body style="background:#FFFFFF"><div class="screen " data-name="Đội hình - Cầu thủ"><div class="status red"><span>9:41</span><span>100%</span></div><div class="hdr-tab">Đội hình</div><div class="content"><div class="bar"><div class="chip on">Cầu thủ</div><div class="chip ">Ban huấn luyện</div></div><div class="list"><div class="section">Thủ môn (2)</div><div class="card row"><div class="row-main"><div class="row-title">Cầu thủ 01</div><div class="row-sub">Sẵn sàng</div></div><div class="row-right">0 bàn</div></div><div class="card row"><div class="row-main"><div class="row-title">Cầu thủ 02</div><div class="row-sub">Sẵn sàng</div></div><div class="row-right">0 bàn</div></div><div class="section">Hậu vệ (3)</div><div class="card row"><div class="row-main"><div class="row-title">Cầu thủ 03</div><div class="row-sub">Sẵn sàng</div></div><div class="row-right">1 bàn</div></div><div class="card row"><div class="row-main"><div class="row-title">Cầu thủ 04</div><div class="row-sub">Chấn thương</div></div><div class="row-right">0 bàn</div></div><div class="card row"><div class="row-main"><div class="row-title">Cầu thủ 05</div><div class="row-sub">Sẵn sàng</div></div><div class="row-right">0 bàn</div></div><div class="section">Tiền vệ (3)</div><div class="card row"><div class="row-main"><div class="row-title">Cầu thủ 06</div><div class="row-sub">Sẵn sàng</div></div><div class="row-right">3 bàn</div></div><div class="card row"><div class="row-main"><div class="row-title">Cầu thủ 07</div><div class="row-sub">Còn nghi ngờ</div></div><div class="row-right">2 bàn</div></div><div class="card row"><div class="row-main"><div class="row-title">Cầu thủ 08</div><div class="row-sub">Sẵn sàng</div></div><div class="row-right">1 bàn</div></div><div class="section">Tiền đạo (2)</div><div class="card row"><div class="row-main"><div class="row-title">Cầu thủ 09</div><div class="row-sub">Sẵn sàng</div></div><div class="row-right">6 bàn</div></div><div class="card row"><div class="row-main"><div class="row-title">Cầu thủ 10</div><div class="row-sub">Sẵn sàng</div></div><div class="row-right">4 bàn</div></div></div></div><div class="tabbar"><div class="tab"><span class="ic" style="width:24px;height:24px"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--text2)" viewBox="0 0 512 512"><path d="M368 415.86V72a24.07 24.07 0 00-24-24H72a24.07 24.07 0 00-24 24v352a40.12 40.12 0 0040 40h328" fill="none" stroke="var(--text2)" stroke-linejoin="round" stroke-width="32"/><path d="M416 464h0a48 48 0 01-48-48V128h72a24 24 0 0124 24v264a48 48 0 01-48 48z" fill="none" stroke="var(--text2)" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="var(--text2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M240 128h64M240 192h64M112 256h192M112 320h192M112 384h192"/><path d="M176 208h-64a16 16 0 01-16-16v-64a16 16 0 0116-16h64a16 16 0 0116 16v64a16 16 0 01-16 16z"/></svg></span><span style="color:var(--text2)">Tin tức</span></div><div class="tab"><span class="ic" style="width:24px;height:24px"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--red)" viewBox="0 0 512 512"><path d="M402 168c-2.93 40.67-33.1 72-66 72s-63.12-31.32-66-72c-3-42.31 26.37-72 66-72s69 30.46 66 72z" fill="none" stroke="var(--red)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M336 304c-65.17 0-127.84 32.37-143.54 95.41-2.08 8.34 3.15 16.59 11.72 16.59h263.65c8.57 0 13.77-8.25 11.72-16.59C463.85 335.36 401.18 304 336 304z" fill="none" stroke="var(--red)" stroke-miterlimit="10" stroke-width="32"/><path d="M200 185.94c-2.34 32.48-26.72 58.06-53 58.06s-50.7-25.57-53-58.06C91.61 152.15 115.34 128 147 128s55.39 24.77 53 57.94z" fill="none" stroke="var(--red)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M206 306c-18.05-8.27-37.93-11.45-59-11.45-52 0-102.1 25.85-114.65 76.2-1.65 6.66 2.53 13.25 9.37 13.25H154" fill="none" stroke="var(--red)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/></svg></span><span style="color:var(--red)">Đội hình</span></div><div class="tab"><span class="ic" style="width:24px;height:24px"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--text2)" viewBox="0 0 512 512"><circle cx="256" cy="256" r="192" fill="none" stroke="var(--text2)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="var(--text2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 175.15l-76.09 63.83L200 320h112l20.09-81.02L256 175.15zM332.09 238.98l52.87-22.4 25.78-73.26M447 269.97l-62.04-53.39M179.91 238.98l-52.87-22.4-25.78-73.26M65 269.97l62.04-53.39M256 175.15v-57.57l64-42.64M192 74.93l64 42.65M312 320l28 48-28 71M410.74 368H342M200 320l-28 48 28.37 71.5M101.63 368H172"/></svg></span><span style="color:var(--text2)">Trận đấu</span></div><div class="tab"><span class="ic" style="width:24px;height:24px"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--text2)" viewBox="0 0 512 512"><path d="M32 160v296a8 8 0 008 8h136V160a16 16 0 00-16-16H48a16 16 0 00-16 16zM320 48H192a16 16 0 00-16 16v400h160V64a16 16 0 00-16-16zM464 208H352a16 16 0 00-16 16v240h136a8 8 0 008-8V224a16 16 0 00-16-16z" fill="none" stroke="var(--text2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg></span><span style="color:var(--text2)">BXH</span></div><div class="tab"><span class="ic" style="width:24px;height:24px"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--text2)" viewBox="0 0 512 512"><path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="var(--text2)" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="var(--text2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 128v144h96"/></svg></span><span style="color:var(--text2)">Lịch sử</span></div></div></div></body></html>

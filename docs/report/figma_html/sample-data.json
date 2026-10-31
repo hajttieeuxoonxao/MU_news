@@ -1,0 +1,64 @@
+{
+  "_note": "DỮ LIỆU MINH HỌA để dựng giao diện khi backend chưa chạy. Tên cầu thủ, đội, tỷ số, điểm số là giả. Ban huấn luyện và danh hiệu đọc từ backend/data/*.json (dữ liệu thật có nguồn). Chạy generate.mjs với địa chỉ backend để thay bằng dữ liệu thật.",
+  "news": [
+    { "id": "n1", "title": "Matchday guide: everything you need to know before the weekend", "summary": "Kick-off time, team news and how to follow the game, all in one place ahead of the next Premier League fixture.", "source": "manutd.com", "minutesAgo": 35, "isTransfer": false, "image": true },
+    { "id": "n2", "title": "Report: United prepare January bid for midfield target", "summary": "The club are said to be weighing up an offer as the winter window approaches, according to the latest reports.", "source": "Football365", "minutesAgo": 120, "isTransfer": true, "image": true },
+    { "id": "n3", "title": "Training gallery: squad prepares at Carrington", "summary": "The first team stepped up preparations with a full session at the training ground this morning.", "source": "manutd.com", "minutesAgo": 300, "isTransfer": false, "image": false },
+    { "id": "n4", "title": "Transfer roundup: latest links and rumours", "summary": "A look at the names linked with a move to Old Trafford this week and where talks stand.", "source": "CaughtOffside", "minutesAgo": 480, "isTransfer": true, "image": true },
+    { "id": "n5", "title": "Five talking points from the last Premier League match", "summary": "Tactics, standout performers and what the result means for the season ahead.", "source": "Football365", "minutesAgo": 1500, "isTransfer": false, "image": false }
+  ],
+  "players": [
+    { "id": 1, "name": "Cầu thủ 01", "position": "Thủ môn", "status": "Sẵn sàng", "goals": 0, "news": null },
+    { "id": 2, "name": "Cầu thủ 02", "position": "Thủ môn", "status": "Sẵn sàng", "goals": 0, "news": null },
+    { "id": 3, "name": "Cầu thủ 03", "position": "Hậu vệ", "status": "Sẵn sàng", "goals": 1, "news": null },
+    { "id": 4, "name": "Cầu thủ 04", "position": "Hậu vệ", "status": "Chấn thương", "goals": 0, "news": "Chấn thương gân kheo – dự kiến trở lại sau 2 tuần" },
+    { "id": 5, "name": "Cầu thủ 05", "position": "Hậu vệ", "status": "Sẵn sàng", "goals": 0, "news": null },
+    { "id": 6, "name": "Cầu thủ 06", "position": "Tiền vệ", "status": "Sẵn sàng", "goals": 3, "news": null },
+    { "id": 7, "name": "Cầu thủ 07", "position": "Tiền vệ", "status": "Còn nghi ngờ", "goals": 2, "news": null },
+    { "id": 8, "name": "Cầu thủ 08", "position": "Tiền vệ", "status": "Sẵn sàng", "goals": 1, "news": null },
+    { "id": 9, "name": "Cầu thủ 09", "position": "Tiền đạo", "status": "Sẵn sàng", "goals": 6, "news": null },
+    { "id": 10, "name": "Cầu thủ 10", "position": "Tiền đạo", "status": "Sẵn sàng", "goals": 4, "news": null }
+  ],
+  "playerDetail": {
+    "profile": { "name": "Cầu thủ 09", "position": "Tiền đạo", "status": "Sẵn sàng", "news": null },
+    "season": { "minutes": 820, "goals": 6, "assists": 2 },
+    "pastSeasons": [
+      { "season": "2025/26", "minutes": 2410, "goals": 11, "assists": 4 },
+      { "season": "2024/25", "minutes": 1980, "goals": 8, "assists": 5 },
+      { "season": "2023/24", "minutes": 1560, "goals": 5, "assists": 3 }
+    ]
+  },
+  "upcoming": [
+    { "competition": "Premier League", "date": "T7, 07/11 · 22:00", "home": "Man United", "away": "Đội 07" },
+    { "competition": "Premier League", "date": "CN, 22/11 · 23:30", "home": "Đội 12", "away": "Man United" },
+    { "competition": "Premier League", "date": "T7, 29/11 · 19:30", "home": "Man United", "away": "Đội 03" },
+    { "competition": "Premier League", "date": "T4, 03/12 · 03:15", "home": "Đội 15", "away": "Man United" }
+  ],
+  "results": [
+    { "competition": "Premier League", "date": "CN, 25/10 · 21:00", "home": "Man United", "away": "Đội 09", "hg": 2, "ag": 1 },
+    { "competition": "Premier League", "date": "T7, 18/10 · 18:30", "home": "Đội 04", "away": "Man United", "hg": 1, "ag": 1 },
+    { "competition": "Premier League", "date": "CN, 05/10 · 20:00", "home": "Man United", "away": "Đội 16", "hg": 3, "ag": 0 },
+    { "competition": "Premier League", "date": "T7, 27/09 · 21:00", "home": "Đội 02", "away": "Man United", "hg": 2, "ag": 0 }
+  ],
+  "standingsSeason": "2026-27",
+  "standings": [
+    ["Đội 01", 9, 7, 1, 1, 20, 7, 22], ["Đội 02", 9, 6, 2, 1, 18, 8, 20], ["Đội 03", 9, 6, 1, 2, 17, 10, 19],
+    ["Man United", 9, 5, 2, 2, 15, 10, 17], ["Đội 05", 9, 5, 1, 3, 14, 11, 16], ["Đội 06", 9, 4, 3, 2, 13, 10, 15],
+    ["Đội 07", 9, 4, 2, 3, 12, 11, 14], ["Đội 08", 9, 4, 1, 4, 11, 12, 13], ["Đội 09", 9, 3, 3, 3, 12, 12, 12],
+    ["Đội 10", 9, 3, 3, 3, 10, 11, 12], ["Đội 11", 9, 3, 2, 4, 11, 13, 11], ["Đội 12", 9, 3, 2, 4, 9, 12, 11],
+    ["Đội 13", 9, 3, 1, 5, 10, 14, 10], ["Đội 14", 9, 2, 3, 4, 9, 13, 9], ["Đội 15", 9, 2, 3, 4, 8, 13, 9],
+    ["Đội 16", 9, 2, 2, 5, 8, 14, 8], ["Đội 17", 9, 2, 1, 6, 7, 15, 7], ["Đội 18", 9, 1, 3, 5, 7, 16, 6],
+    ["Đội 19", 9, 1, 2, 6, 6, 17, 5], ["Đội 20", 9, 0, 3, 6, 5, 18, 3]
+  ],
+  "seasons": [
+    ["2026-27", 4, 17, 9, 5, 2, 2], ["2025-26", 6, 60, 38, 17, 9, 12], ["2024-25", 9, 52, 38, 14, 10, 14],
+    ["2023-24", 7, 58, 38, 17, 7, 14], ["2022-23", 3, 71, 38, 22, 5, 11], ["2021-22", 5, 62, 38, 18, 8, 12],
+    ["2020-21", 2, 76, 38, 22, 10, 6], ["2019-20", 3, 70, 38, 20, 10, 8], ["2018-19", 6, 64, 38, 19, 7, 12]
+  ],
+  "seasonDetailLabel": "2012-13",
+  "seasonMatches": [
+    ["2012-08-20", "Đội 11", "Man United", 1, 0], ["2012-08-25", "Man United", "Đội 17", 3, 2],
+    ["2012-09-02", "Đội 14", "Man United", 2, 3], ["2012-09-15", "Man United", "Đội 19", 4, 0],
+    ["2012-09-23", "Đội 06", "Man United", 1, 2]
+  ]
+}
